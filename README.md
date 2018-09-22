@@ -3,8 +3,8 @@ A simple, web-based clock web application. Developed as a main project for CS 37
 ## Group Members
 * Philip Heindel (philipheindel)
 * Austin Osborne
-* Scott Fox
-* Aaron Jordan
+* Scott Fox (Foxs02)
+* Aaron Jordan (jordaj01)
 * Nathan Lantz
 
 More information will be added in the future.
