@@ -5,6 +5,6 @@ A simple, web-based clock web application. Developed as a main project for CS 37
 * Austin Osborne
 * Scott Fox (Foxs02)
 * Aaron Jordan (jordaj01)
-* Nathan Lantz
+* Nathan Lantz (nlan253)
 
 More information will be added in the future.
