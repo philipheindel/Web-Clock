@@ -1,0 +1,24 @@
+#center {
+    margin: 10px;
+    text-align: center;
+    vertical-align: middle;
+    top: 50%;
+}
+
+#face {
+    margin: 10px;
+    font-size: 70px;
+}
+
+#controls {
+    margin: 10px;
+}
+
+#test {
+    border: none;
+}
+
+#test:active {
+    border: none;
+    box-shadow: none;
+}
