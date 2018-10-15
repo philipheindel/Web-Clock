@@ -17,6 +17,10 @@ function showTheTime()
         h = h - 12;
         session = "PM";
     }
+    if(h==12)
+    {
+        session = "PM";
+    }
     
     /*
         Checks if statement should have a 0 in front of it.

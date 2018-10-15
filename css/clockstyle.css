@@ -4,14 +4,8 @@ body
 }
 .clock
 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:
-        translateX(-50%)
-        translateY(-50%);
     color: #ffd700;
     font-family: 'Allerta Stencil';
     font-size: 122px;
-    letter-spacing: 7px;
+    text-align: center;
 }
