@@ -6,11 +6,78 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/clockstyle.css" />
+    <script type="text/javascript" src="js/clockscript.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </head>
 
-
-    
+<body>
+    <div id="appBody" class="container-fluid">
+        <div class="row">
+            <div id="settingsCol" class="col menu-bar">
+                <button id="settingsButton" class="btn btn-outline-primary">Settings</button>
+            </div>
+            <div id="loginCol" class="col menu-bar">
+                <button id="loginButton" class="btn btn-outline-primary">Login</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="text-align:center;background-color:lightblue">
+                <div id="Clock">CLOCK PLACEHOLDER<br />This is where the main display for the clock will go.<br />(The inline css is only temporary for the placeholder)</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col menu-bar main-content">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-sm btn-outline-primary active" onmouseout="document.getElementById('twentyfourHour').blur()">
+                        <input id="twentyfourHour" type="radio" name="options" autocomplete="off">
+                        24 Hr.
+                    </label>
+                    <label class="btn btn-sm btn-outline-primary" onmouseout="document.getElementById('twelveHour').blur()">
+                        <input id="twelveHour" type="radio" name="options" autocomplete="off">
+                        12 Hr.
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col menu-bar main-content">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Alarm" onmouseout="document.getElementById('alarm').blur()">
+                        <input id="alarm" type="radio" name="options" autocomplete="off">
+                        <i class="material-icons">access_alarm</i>
+                    </label>
+                    <label class="btn btn-outline-primary active" data-toggle="tooltip" data-placement="bottom" title="Clock" onmouseout="document.getElementById('clock').blur()">
+                        <input id="clock" type="radio" name="options" autocomplete="off">
+                        <i class="material-icons">access_time</i>
+                    </label>
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Stopwatch" onmouseout="document.getElementById('stopwatch').blur()">
+                        <input id="stopwatch" type="radio" name="options" autocomplete="off">
+                        <i class="material-icons">timer</i>
+                    </label>
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Timer" onmouseout="document.getElementById('timer').blur()">
+                        <input id="timer" type="radio" name="options" autocomplete="off">
+                        <i class="material-icons">hourglass_empty</i>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="text-align:center;background-color:lightblue">
+                <div id="controlArea">CONTROLS PLACEHOLDER<br />This is where we will load the content for the various components using AJAX.<br />(The inline css is only temporary for the placeholder)</div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
