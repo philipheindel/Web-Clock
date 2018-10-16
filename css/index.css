@@ -1,9 +1,17 @@
 .menu-bar {
     margin: 10px;
+
 }
 
 .main-content {
     text-align: center;
+}
+
+.leftheader{
+    float: left
+}
+.rightheader{
+    float: right;
 }
 
 #loginCol {
