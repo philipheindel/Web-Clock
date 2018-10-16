@@ -21,7 +21,7 @@
     </script>
 </head>
 
-<body onload="showTheTime();">
+<body onload="showTheTime(); loadControl('TimeZone.html')">
     <div id="appBody" class="container-fluid">
         <div class="row">
             <div id="settingsCol" class="col menu-bar">
@@ -57,9 +57,9 @@
                         <input id="alarm" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">access_alarm</i>
                     </label>
-                    <label class="btn btn-outline-primary active" data-toggle="tooltip" data-placement="bottom" title="Clock" onmouseout="document.getElementById('clock').blur()">
+                    <label class="btn btn-outline-primary active" data-toggle="tooltip" data-placement="bottom" title="Clock" onmouseout="document.getElementById('clock').blur()" onclick="loadControl('TimeZone.html')">
                         <input id="clock" type="radio" name="options" autocomplete="off">
-                        <i class="material-icons">access_time</i>
+                        <i class="material-icons">public</i>
                     </label>
                     <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Stopwatch" onmouseout="document.getElementById('stopwatch').blur()">
                         <input id="stopwatch" type="radio" name="options" autocomplete="off">
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col" style="text-align:center;background-color:lightblue">
+            <div class="col menu-bar main-content">
                 <div id="controlArea">CONTROLS PLACEHOLDER<br />This is where we will load the content for the various components using AJAX.<br />(The inline css is only temporary for the placeholder)</div>
             </div>
         </div>
