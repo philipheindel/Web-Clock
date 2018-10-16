@@ -22,3 +22,7 @@ div.center {
     border: none;
     box-shadow: none;
 }
+ dropdown {
+ width: 300px !important;
+ background-color: red;
+ }
