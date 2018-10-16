@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <title>Advanced Settings</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        body {
+            margin: 5px;
+            padding: 20px;
+        }
+
+        button[type=button] {
+            padding: 7px;
+            margin: auto;
+            text-align: center;
+            float: right;
+
+        }
+        
+        button[type=remove-button]{
+             width: 30%;
+             margin:auto;
+             text-align: center;
+             float: left;
+             position: relative;
+             left: 35%;
+        }
+
+        input[type=text] {
+            width: 35%;
+            padding: 8px 13px;
+            margin: auto;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 50%;
+            padding: 8px 13px;
+            margin: auto;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <form>
+            <fieldset>
+
+                <legend>
+                    <font color="#596a87">Settings</font>
+                </legend>
+
+
+
+                <hr>
+                <div class="form-group">
+                    <label class="control-label" for="accSettings"><font color="#596a87">Account Settings</font></label>
+                </div>
+
+                <!-- Display Name -->
+                <div class="form-group" id="usrNameDiv">
+                    <label class="control-label" for="usrName">Change Username</label>
+                    <div>
+                        <input id="usrName" name="usrName" placeholder="Type current username" type="text">
+                        <button id="editButton" name="editButton" type="button" class="btn btn-outline-success">Edit</button>
+                    </div>
+
+                </div>
+
+                <div class="form-group" id="emailDiv">
+                    <label class="control-label" for="email">Change Email</label>
+                    <div>
+                        <input id="email" name="email" placeholder="Typer current email" type="text">
+                        <button id="editButton" name="editButton" type="button" class="btn btn-outline-success">Edit</button>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label class="control-label" for="accSettings"><font color="#596a87">Notification Settings</font></label>
+                </div>
+
+                <!-- Select Alarm Sound -->
+                <div class="form-group" id="alarmSoundDiv">
+                    <label class="control-label" for="alarmSound">Choose Alarm Sound</label>
+                    <div>
+                        <select id="selectSound" name="selectSound">
+                                <option value="noSound">No Sound</option>
+                                <option value="defaultAlarm">Default Alarm</option>
+                                <option value="fallingBomb">Falling Bomb</option>
+                                <option value="policeCar">Police Car</option>
+                                <option value="rooster">Rooster</option>
+                                <option value="cuckooClock">Cuckoo Clock</option>
+                                <option value="militaryTrumpet">Military Trumpet</option>
+                                <option value="cryingBaby">Crying Baby</option>
+                                <option value="harpStrumming">Harp Strumming</option>
+                                <option value="trainWistle">Train Wistle</option>
+                                <option value="birdSong">Bird Song</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" id="emailNotifcations">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check1">
+                        <label class="form-check-label" for="check1">Email Notifications</label>
+                        <br>
+                        <input type="checkbox" class="form-check-input" id="check2">
+                        <label class="form-check-label" for="check2">Browser Notifications</label>
+                    </div>
+                </div>
+
+                <br><br><br><br>
+
+                
+                <!-- Delete Account -->
+                <div class="form-group">
+                    <div>
+                        <button id="deleteButton" name="deleteButton" type="remove-button" class="btn btn-outline-danger">Delete Account</button>
+                    </div>
+                </div>
+
+                <br><hr>   
+                
+                <!-- Save changes Button -->
+                <div class="form-group">
+                    <div>
+                        <button id="saveButton" name="saveButton" type="button" class="btn btn-outline-success">Save Changes</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+
+</html>
