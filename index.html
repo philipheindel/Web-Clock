@@ -53,7 +53,7 @@
         <div class="row">
             <div class="col menu-bar main-content">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Alarm" onmouseout="document.getElementById('alarm').blur()">
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Alarm" onmouseout="document.getElementById('alarm').blur()" onclick="loadControl('Alarm.html')">
                         <input id="alarm" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">access_alarm</i>
                     </label>
@@ -61,11 +61,11 @@
                         <input id="clock" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">public</i>
                     </label>
-                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Stopwatch" onmouseout="document.getElementById('stopwatch').blur()">
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Stopwatch" onmouseout="document.getElementById('stopwatch').blur()" onclick="loadControl('Stopwatch.html')">
                         <input id="stopwatch" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">timer</i>
                     </label>
-                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Timer" onmouseout="document.getElementById('timer').blur()">
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Timer" onmouseout="document.getElementById('timer').blur()" onclick="loadControl('Timer.html')">
                         <input id="timer" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">hourglass_empty</i>
                     </label>
