@@ -2,26 +2,55 @@
 <html lang="en">
     
     <head>
-        
-        
-        
-        
+        <link rel='stylesheet' type = 'text/css' href='css/clock.css'>
     </head>
     
     <body>
+        <!--
+            With any luck, this is going to pull the clock in formation from
+            clockindex.html to be able to set an alarm based on the current time.
+            Then have dropdowns to be able to set and clear the alarm.
+        !-->
         
+        <div Clock = "clockindex.html">
+            <h2 id='clock'></h2>
+        </div>
+            
+        <div id='alarm-container'>
+            <h3>Set Alarm Time</h3>
+            
+            <label>
+                <div>
+                    <select id='alarmhrs' ></select>
+                </div>
+            </label>
+            
+            <label>
+                <div>
+                    <select id='alarmmins' ></select>
+                </div>
+            </label>
+            
+            <label>
+                <div>
+                    <select id="ampm">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+            </label>
+        </div>
+            
+        <div id='buttonHolder'>
+            <div>
+                <button id='setButton' onClick='alarmSet()'>Set Alarm</button>
+            </div>
+            
+            <div>
+                <button id='clearButton' onClick='alarmClear()'>Clear Alarm</button>
+            </div>
+        </div>
         
-        
-        
-        
+        <script type='text/javascript' src='js/alarm.js'></script>
     </body>
-    
-    
-    
-    
-    
-    
-    
-    
-    
 </html>
