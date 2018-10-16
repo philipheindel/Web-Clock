@@ -1,11 +1,5 @@
-body
-{
-    background: white;
-}
 .clock
 {
-    color: #ffd700;
-    font-family: 'Allerta Stencil';
-    font-size: 122px;
+    font-size: 80px;
     text-align: center;
 }
