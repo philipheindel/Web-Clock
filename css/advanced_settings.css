@@ -1,0 +1,49 @@
+body {
+    margin: 5px;
+    padding: 20px;
+}
+
+legend {
+    color:  #596a87;
+}
+
+button[type=button] {
+    padding: 7px;
+    margin: auto;
+    text-align: center;
+    float: right;
+
+}
+
+button[type=remove-button]{
+     width: 30%;
+     margin:auto;
+     text-align: center;
+     float: left;
+     position: relative;
+     left: 35%;
+}
+
+input[type=text] {
+    width: 35%;
+    padding: 8px 13px;
+    margin: auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select {
+    width: 50%;
+    padding: 8px 13px;
+    margin: auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#discardButton {
+    margin-right: 10px
+}

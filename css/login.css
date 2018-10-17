@@ -1,0 +1,16 @@
+.container-fluid {
+    margin: 5%;
+
+}
+
+.form-btn {
+    text-align: center;
+}
+
+.btn-outline-danger {
+    width: 50%;
+}
+
+#loginForm {
+    border-right: 1px solid #ddd;
+}

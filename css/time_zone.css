@@ -1,0 +1,9 @@
+div.dropdown {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#offsetClock {
+    font-size: 60px;
+}

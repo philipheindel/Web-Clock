@@ -2,74 +2,70 @@
 <html>
 
 <head>
-
-    <title>Advanced Settings</title>
-
+    <title>Settings</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <style>
-        body {
-            margin: 5px;
-            padding: 20px;
-        }
-
-        button[type=button] {
-            padding: 7px;
-            margin: auto;
-            text-align: center;
-            float: right;
-
-        }
-        
-        button[type=remove-button]{
-             width: 30%;
-             margin:auto;
-             text-align: center;
-             float: left;
-             position: relative;
-             left: 35%;
-        }
-
-        input[type=text] {
-            width: 35%;
-            padding: 8px 13px;
-            margin: auto;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        select {
-            width: 50%;
-            padding: 8px 13px;
-            margin: auto;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-    </style>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/advanced_settings.css" />
 </head>
 
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <form>
             <fieldset>
-
-                <legend>
-                    <font color="#596a87">Settings</font>
-                </legend>
-
-
-
+                <legend>Settings</legend>
                 <hr>
                 <div class="form-group">
-                    <label class="control-label" for="accSettings"><font color="#596a87">Account Settings</font></label>
+                    <label class="control-label" for="accSettings">Display Settings</label>
+                </div>
+                <div class="form-group">
+                    <label for="showSeconds" class="control-label">Show Seconds</label>
+                    <div id="showSeconds" class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-sm btn-outline-primary active">
+                            <input id="secOn" type="radio" name="options" autocomplete="off">
+                            On
+                        </label>
+                        <label class="btn btn-sm btn-outline-primary">
+                            <input id="secOff" type="radio" name="options" autocomplete="off">
+                            Off
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="showAmPm" class="control-label">Show AM/PM</label>
+                    <div id="showAmPm" class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-sm btn-outline-primary active">
+                            <input id="showAP" type="radio" name="options" autocomplete="off">
+                            Yes
+                        </label>
+                        <label class="btn btn-sm btn-outline-primary">
+                            <input id="hideAP" type="radio" name="options" autocomplete="off">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lightDark" class="control-label">Light/Dark</label>
+                    <div id="lightDark" class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-sm btn-outline-primary active">
+                            <input id="lightOn" type="radio" name="options" autocomplete="off">
+                            Light
+                        </label>
+                        <label class="btn btn-sm btn-outline-primary">
+                            <input id="darkOn" type="radio" name="options" autocomplete="off">
+                            Dark
+                        </label>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label class="control-label" for="accSettings">Account Settings</label>
                 </div>
 
                 <!-- Display Name -->
@@ -94,7 +90,7 @@
                 <hr>
 
                 <div class="form-group">
-                    <label class="control-label" for="accSettings"><font color="#596a87">Notification Settings</font></label>
+                    <label class="control-label" for="accSettings">Notification Settings</label>
                 </div>
 
                 <!-- Select Alarm Sound -->
@@ -102,17 +98,17 @@
                     <label class="control-label" for="alarmSound">Choose Alarm Sound</label>
                     <div>
                         <select id="selectSound" name="selectSound">
-                                <option value="noSound">No Sound</option>
-                                <option value="defaultAlarm">Default Alarm</option>
-                                <option value="fallingBomb">Falling Bomb</option>
-                                <option value="policeCar">Police Car</option>
-                                <option value="rooster">Rooster</option>
-                                <option value="cuckooClock">Cuckoo Clock</option>
-                                <option value="militaryTrumpet">Military Trumpet</option>
-                                <option value="cryingBaby">Crying Baby</option>
-                                <option value="harpStrumming">Harp Strumming</option>
-                                <option value="trainWistle">Train Wistle</option>
-                                <option value="birdSong">Bird Song</option>
+                            <option value="noSound">No Sound</option>
+                            <option value="defaultAlarm">Default Alarm</option>
+                            <option value="fallingBomb">Falling Bomb</option>
+                            <option value="policeCar">Police Car</option>
+                            <option value="rooster">Rooster</option>
+                            <option value="cuckooClock">Cuckoo Clock</option>
+                            <option value="militaryTrumpet">Military Trumpet</option>
+                            <option value="cryingBaby">Crying Baby</option>
+                            <option value="harpStrumming">Harp Strumming</option>
+                            <option value="trainWistle">Train Wistle</option>
+                            <option value="birdSong">Bird Song</option>
                         </select>
                     </div>
                 </div>
@@ -129,7 +125,7 @@
 
                 <br><br><br><br>
 
-                
+
                 <!-- Delete Account -->
                 <div class="form-group">
                     <div>
@@ -137,12 +133,18 @@
                     </div>
                 </div>
 
-                <br><hr>   
-                
+                <br>
+                <hr>
+
                 <!-- Save changes Button -->
                 <div class="form-group">
                     <div>
-                        <button id="saveButton" name="saveButton" type="button" class="btn btn-outline-success">Save Changes</button>
+                        <button id="saveButton" name="saveButton" type="button" class="btn btn-outline-success" onclick="location.href='index.html'">Save Changes</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <button id="discardButton" name="discardButton" type="button" class="btn btn-outline-danger" onclick="location.href='index.html'">Discard Changes</button>
                     </div>
                 </div>
 
