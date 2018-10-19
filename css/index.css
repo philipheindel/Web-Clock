@@ -1,19 +1,39 @@
 .menu-bar {
     margin: 10px;
+}
 
+.material-icons {
+    vertical-align: middle;
 }
 
 .main-content {
     text-align: center;
 }
 
-.leftheader{
+.leftheader {
     float: left
 }
-.rightheader{
+
+.rightheader {
     float: right;
 }
 
 #loginCol {
     text-align: right;
+}
+
+#firstName {
+    font-size: 14px;
+}
+
+#loginPopup {
+    font-size: 14px;
+    position: absolute;
+    border: 1px solid #ddd;
+    right: 15px;
+    width: 100%;
+    height: 400px;
+    z-index: 2;
+    background-color: white;
+    visibility: visible;
 }

@@ -2,53 +2,16 @@
 <html>
 
 <head>
-    <title>Timer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-        .buttons {
-            padding: 10px;
-            margin: auto;
-            text-align: center;
-        }
 
-        .timerInput {
-            margin: auto;
-            text-align: center;
-        }
-
-        input[type=text]{
-            width: 55px;
-            padding: 10px 17px;
-            margin: auto;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            
-        }
-        label{
-            margin: auto;
-            padding: 2px;
-            font-size: 32px;
-        }
-        body {
-            border-radius: 5px;
-            background-color: #ffffff;
-            padding: px; 
-        }
-        
-    </style>
 </head>
 
 <body>
     <div class="timerInput">
-        <input type="text" id="hours" name="hours" maxlength="2" >
+        <input class="form-control" type="text" id="timerHours" name="hours" maxlength="2" placeholder="H">
             <label for="placeHolder">:</label>
-        <input type="text" id="minutes" name="minutes" maxlength="2" >
+        <input class="form-control" type="text" id="timerMinutes" name="minutes" maxlength="2" placeholder="M">
             <label for="placeHolder">:</label>
-        <input type="text" id="seconds" name="seconds" maxlength="2">
+        <input class="form-control" type="text" id="timerSeconds" name="seconds" maxlength="2" placeholder="S">
     </div>
 
     <div class="buttons">

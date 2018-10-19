@@ -1,0 +1,29 @@
+.buttons {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.timerInput {
+    margin: auto;
+    text-align: center;
+}
+
+input[type=text]{
+    width: 55px;;
+    padding: 10px 17px;
+    margin: auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+label{
+    margin: auto;
+    padding: 2px;
+    font-size: 32px;
+}
+body {
+    border-radius: 5px;
+}
