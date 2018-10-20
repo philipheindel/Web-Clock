@@ -47,3 +47,13 @@ select {
 #discardButton {
     margin-right: 10px
 }
+
+#showSeconds {
+    float: right;
+}
+#showAmPm {
+    float: right;
+}
+#lightDark {
+    float: right;
+}
