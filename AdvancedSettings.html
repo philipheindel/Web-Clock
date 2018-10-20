@@ -20,25 +20,31 @@
                 <legend>Settings</legend>
                 <hr>
                 <div class="form-group">
-                    <label class="control-label" for="accSettings">Display Settings</label>
+                    <label class="control-label" for="accSettings"><font color="#596a87">Display Settings</font></label>
                 </div>
+                
+                <!-- show seconds switch -->
+                
                 <div class="form-group">
                     <label for="showSeconds" class="control-label">Show Seconds</label>
-                    <div id="showSeconds" class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <div id="showSeconds" name="showSeconds" class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-sm btn-outline-primary active">
-                            <input id="secOn" type="radio" name="options" autocomplete="off">
+                            <input id="secOn" type="radio" name="secOn" autocomplete="off">
                             On
                         </label>
                         <label class="btn btn-sm btn-outline-primary">
-                            <input id="secOff" type="radio" name="options" autocomplete="off">
+                            <input id="secOff" type="radio" name="secOff" autocomplete="off">
                             Off
                         </label>
                     </div>
                 </div>
 
+
+                <!-- AM/PM switch -->
+
                 <div class="form-group">
                     <label for="showAmPm" class="control-label">Show AM/PM</label>
-                    <div id="showAmPm" class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <div id="showAmPm" name="showAmPm" class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-sm btn-outline-primary active">
                             <input id="showAP" type="radio" name="options" autocomplete="off">
                             Yes
@@ -50,9 +56,13 @@
                     </div>
                 </div>
 
+
+                <!-- Light and dark theme switch -->
                 <div class="form-group">
+                    
                     <label for="lightDark" class="control-label">Light/Dark</label>
-                    <div id="lightDark" class="btn-group btn-group-toggle" data-toggle="buttons">
+                    
+                    <div id="lightDark" name="lightDark" class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-sm btn-outline-primary active">
                             <input id="lightOn" type="radio" name="options" autocomplete="off">
                             Light
@@ -62,10 +72,15 @@
                             Dark
                         </label>
                     </div>
+                    
                 </div>
-                <hr>
+                
+                
+                <hr> <!-- NEW SECTION -->
+                
+                
                 <div class="form-group">
-                    <label class="control-label" for="accSettings">Account Settings</label>
+                    <label class="control-label" for="accSettings"><font color="#596a87">Account Settings</font></label>
                 </div>
 
                 <!-- Display Name -->
@@ -87,10 +102,12 @@
 
                 </div>
 
-                <hr>
+
+                <hr> <!-- NEW SECTION -->
+
 
                 <div class="form-group">
-                    <label class="control-label" for="accSettings">Notification Settings</label>
+                    <label class="control-label" for="accSettings"><font color="#596a87">Notification Settings</font></label>
                 </div>
 
                 <!-- Select Alarm Sound -->
