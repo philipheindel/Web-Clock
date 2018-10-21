@@ -1,4 +1,7 @@
-
+body {
+    margin: 5px;
+    padding: 20px;
+}
 .container-fluid {
     margin: 5%;
 
