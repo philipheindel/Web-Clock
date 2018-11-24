@@ -4,9 +4,20 @@
 		$password = "";
 		$dbname = "";
     	$dbtable = "";
-
-
-
+    	
+    	
+    	$emailLogin = $_POST['emailLogin'];
+    	$passwordlogin = $_POST['passwordLogin'];
+    	$rememberme = $_POST['rememberMe'];
+    	$firstname = $_POST['firstName'];
+    	$lastname = $_POST['lastName'];
+    	$email = $_POST['emailInput'];
+    	$password = $_POST['passwordInput'];
+    	$verifyPassword = $_POST['verifyPassword'];
+    	
+    	//echo ("$emailLogin $password $rememberme $firstname $lastname $email $password $verifyPassword");
+    	
+    	
 
 ?>
 
