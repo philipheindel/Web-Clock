@@ -1,3 +1,7 @@
+body {
+    margin: 5px;
+    padding: 20px;
+}
 .container-fluid {
     margin: 5%;
 
@@ -13,4 +17,14 @@
 
 #loginForm {
     border-right: 1px solid #ddd;
+    
+}
+#loginForm legend {
+    text-decoration: none;
+    color:  #596a87;
+}
+
+#createAccount legend {
+    text-decoration: none;
+    color:  #596a87;
 }
