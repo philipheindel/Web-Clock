@@ -24,6 +24,7 @@
     <script type="text/javascript" src="js/alarm.js"></script>
     <script type="text/javascript" src="js/clock.js"></script>
     <script type="text/javascript" src="js/timer.js"></script>
+    <script type="text/javascript" src="js/stopWatch.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
@@ -71,7 +72,7 @@
                         <input id="clock" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">public</i>
                     </label>
-                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Stopwatch" onmouseout="document.getElementById('stopwatch').blur()" onclick="loadControl('Stopwatch.html')">
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Stopwatch" onmouseout="document.getElementById('stopwatch').blur()" onclick="loadControl('Stopwatch.html'); loadControl('js/stopWatch.js')">
                         <input id="stopwatch" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">timer</i>
                     </label>
