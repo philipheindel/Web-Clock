@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-</head>
-
 <body>
     <div id="offsetClock" class="clock">00:00:00</div>
     <div class="dropdown">

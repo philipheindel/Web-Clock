@@ -1,50 +1,24 @@
 <?php
    		$servername = "";
-		$username = "";
-		$password = "";
-		$dbname = "";
-    	$dbtable = "";
-    	
-    	
-    	$emailLogin = $_POST['emailLogin'];
-    	$passwordlogin = $_POST['passwordLogin'];
-    	$rememberme = $_POST['rememberMe'];
-    	$firstname = $_POST['firstName'];
-    	$lastname = $_POST['lastName'];
-    	$email = $_POST['emailInput'];
-    	$password = $_POST['passwordInput'];
-    	$verifyPassword = $_POST['verifyPassword'];
-    	
-    	//echo ("$emailLogin $password $rememberme $firstname $lastname $email $password $verifyPassword");
-    	
-    	
-
+           $username = "";
+           $password = "";
+           $dbname = "";
+           $dbtable = "";
+           
+           
+           $emailLogin = $_POST['emailLogin'];
+           $passwordlogin = $_POST['passwordLogin'];
+           $rememberme = $_POST['rememberMe'];
+           $firstname = $_POST['firstName'];
+           $lastname = $_POST['lastName'];
+           $email = $_POST['emailInput'];
+           $password = $_POST['passwordInput'];
+           $verifyPassword = $_POST['verifyPassword'];
+           
+           //echo ("$emailLogin $password $rememberme $firstname $lastname $email $password $verifyPassword");
+       
+   
 ?>
-
-<!DOCTYPE html>
-<html>
-
-
-<head>
-    <title>Login/Create Account</title>
-        <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--Library links and scripts-->
-    <link rel="stylesheet" href="libraries/bootstrap-4.1.3-dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="libraries/bootstrap-4.1.3-dist/css/bootstrap-grid.min.css"/>
-    <link rel="stylesheet" href="libraries/bootstrap-4.1.3-dist/css/bootstrap-reboot.min.css"/>
-    <script type="text/javascript" src="libraries/jquery/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="libraries/popper/popper.min.js"></script>
-    <script type="text/javascript" src="libraries/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="libraries/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js"></script>
-    <!--Custom links and scripts-->
-    <link rel="stylesheet" href="css/login.css" />
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
-</head>
 
 <body>
     <div class="container-fluid">
@@ -103,10 +77,8 @@
         <hr/>
         <div class="row">
             <div class="col form-btn">
-                <button class="btn btn-outline-danger" onclick="location.href='index.html'">Cancel</button>
+                <a class="btn btn-outline-danger" href="../index/index.php">Cancel</a>
             </div>
         </div>
     </div>
 </body>
-
-</html>

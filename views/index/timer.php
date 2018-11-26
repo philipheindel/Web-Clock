@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<html>
-
-<head>
-
-</head>
+<html lang="en">
 
 <body>
     <div class="timerInput">

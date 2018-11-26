@@ -1,22 +1,6 @@
-<!DOCTYPE HTML>
-<html>
+<?php
 
-<head>
-    <title>Settings</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Library links and scripts-->
-    <link rel="stylesheet" href="libraries/bootstrap-4.1.3-dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="libraries/bootstrap-4.1.3-dist/css/bootstrap-grid.min.css"/>
-    <link rel="stylesheet" href="libraries/bootstrap-4.1.3-dist/css/bootstrap-reboot.min.css"/>
-    <script type="text/javascript" src="libraries/jquery/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="libraries/popper/popper.min.js"></script>
-    <script type="text/javascript" src="libraries/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="libraries/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js"></script>
-    <!--Custom links and scripts-->
-    <link rel="stylesheet" href="css/advanced_settings.css" />
-</head>
-
+?>
 
 <body>
     <div class="container-fluid">
@@ -161,12 +145,12 @@
                 <!-- Save changes Button -->
                 <div class="form-group">
                     <div>
-                        <button id="saveButton" name="saveButton" type="button" class="btn btn-outline-success" onclick="location.href='index.html'">Save Changes</button>
+                        <a id="saveButton" name="saveButton" class="btn btn-outline-success" href="../index/index.php">Save Changes</a>
                     </div>
                 </div>
                 <div class="form-group">
                     <div>
-                         <button id="discardButton" name="discardButton" type="button" class="btn btn-outline-danger" onclick="location.href='index.html'">Discard Changes</button>
+                         <a id="discardButton" name="discardButton" class="btn btn-outline-danger" href="../index/index.php">Discard Changes</a>
                     </div>
                 </div>
 
@@ -175,5 +159,3 @@
 
     </div>
 </body>
-
-</html>
