@@ -1,10 +1,5 @@
-<?php 
-
-/*
-	A footer for pages
-*/
+<?php
 
 ?>
 
-	
 </html>

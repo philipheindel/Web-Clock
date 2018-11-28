@@ -1,22 +1,14 @@
 <?php
 /**
  * This file holds the standard content for the <head> tag
- * of the three main pages of the application. The render()
- * calls should appear as follows:
- * 
- * When on index.php:
- *     render('header', array('title'=>'Clock'));
- * When on AdvancedSettings.php:
- *     render('header', array('title'=>'Settings'));
- * When on Login.php:
- *     render('header', array('title'=>'Login/Create Account'));
+ * of the three main pages of the application.
  */
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo htmlspecialchars($title)?></title>
+    <title><?php echo htmlspecialchars($title) ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--Library links and scripts-->
@@ -46,9 +38,9 @@
         <script type="text/javascript" src="js/clock.js"></script>
         <script type="text/javascript" src="js/timer.js"></script>
         <script type="text/javascript" src="js/stopWatch.js"></script>
-    <?php } else if ($title == SETTINGS_TITLE) { ?>
+    <?php } else if ($title == SETTINGS_TITLE) {?>
         <link rel="stylesheet" href="css/settings.css" />
     <?php } else if ($title == LOGIN_TITLE) {?>
         <link rel="stylesheet" href="css/login.css" />
-    <?php } ?>
+    <?php }?>
 </head>

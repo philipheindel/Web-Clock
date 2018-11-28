@@ -2,7 +2,7 @@
 
 ?>
 
-<body onload="showTheTime(); loadControl('timeZone.php')">
+<body onload="showTheTime(); loadAjax('timeZone.php','#controlArea');">
     <div id="appBody" class="container-fluid">
         <div class="row">
             <div id="settingsCol" class="col menu-bar">
@@ -20,11 +20,11 @@
         <div class="row">
             <div class="col menu-bar main-content">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-sm btn-outline-primary" onmouseout="document.getElementById('twentyfourHour').blur()">
+                    <label class="btn btn-sm btn-outline-primary" onmouseout="$('#twentyfourHour').blur()">
                         <input id="twentyfourHour" type="radio" name="options" autocomplete="off">
                         24 Hr.
                     </label>
-                    <label class="btn btn-sm btn-outline-primary active" onmouseout="document.getElementById('twelveHour').blur()">
+                    <label class="btn btn-sm btn-outline-primary active" onmouseout="$('#twelveHour').blur()">
                         <input id="twelveHour" type="radio" name="options" autocomplete="off">
                         12 Hr.
                     </label>
@@ -34,19 +34,19 @@
         <div class="row">
             <div class="col menu-bar main-content">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Alarm" onmouseout="document.getElementById('alarm').blur()" onclick="loadControl('alarm.php')">
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Alarm" onmouseout="$('#alarm').blur()" onclick="loadAjax('alarm.php','#controlArea')">
                         <input id="alarm" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">access_alarm</i>
                     </label>
-                    <label class="btn btn-outline-primary active" data-toggle="tooltip" data-placement="bottom" title="Time Zone" onmouseout="document.getElementById('clock').blur()" onclick="loadControl('timeZone.php')">
+                    <label class="btn btn-outline-primary active" data-toggle="tooltip" data-placement="bottom" title="Time Zone" onmouseout="$('#clock').blur()" onclick="loadAjax('timeZone.php','#controlArea')">
                         <input id="clock" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">public</i>
                     </label>
-                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Stopwatch" onmouseout="document.getElementById('stopwatch').blur()" onclick="loadControl('stopwatch.php')">
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Stopwatch" onmouseout="$('#stopwatch').blur()" onclick="loadAjax('stopwatch.php','#controlArea')">
                         <input id="stopwatch" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">timer</i>
                     </label>
-                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Timer" onmouseout="document.getElementById('timer').blur()" onclick="loadControl('timer.php')">
+                    <label class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Timer" onmouseout="$('#timer').blur()" onclick="loadAjax('timer.php','#controlArea');">
                         <input id="timer" type="radio" name="options" autocomplete="off">
                         <i class="material-icons">hourglass_empty</i>
                     </label>
