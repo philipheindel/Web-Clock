@@ -1,12 +1,21 @@
 <?php
-   		$servername = "";
-           $username = "";
-           $password = "";
-           $dbname = "";
-           $dbtable = "";
+
+require_once __DIR__ . "/../../controllers/helpers.php";
+   		$servername = "127.0.0.1";
+		$username = "nathanlantz";
+		$password = "";
+		$dbname = "myDB";
+    	$dbtable = "records";
+        $conn;
            
            
-           $emailLogin = $_POST['emailLogin'];
+$conn = connection($servername, $username, $password);   
+
+           
+           
+           
+           
+        /*   $emailLogin = $_POST['emailLogin'];
            $passwordlogin = $_POST['passwordLogin'];
            $rememberme = $_POST['rememberMe'];
            $firstname = $_POST['firstName'];
@@ -15,8 +24,7 @@
            $password = $_POST['passwordInput'];
            $verifyPassword = $_POST['verifyPassword'];
            
-           //echo ("$emailLogin $password $rememberme $firstname $lastname $email $password $verifyPassword");
-       
+       */
    
 ?>
 
