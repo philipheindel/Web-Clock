@@ -2,6 +2,32 @@
 
 ?>
 
+<head>
+        <!-- Fun little addition, addding a custom scroll bar -->
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <style>
+        ::-webkit-scrollbar
+        {
+            width:10px;
+        }
+        ::-webkit-scrollbar-track
+        {
+            box-shadow:inset 0 0 5px grey;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb
+        {
+            background: #007bff;
+            border-radius:10px;
+        }
+        ::-webkit-scrollbar-thumb:hover
+        {
+            background: #007bff;
+        }
+    </style>
+</head>
+
+
 <body>
     <div class="container-fluid">
         <form>
