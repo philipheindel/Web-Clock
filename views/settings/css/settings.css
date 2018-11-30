@@ -57,3 +57,15 @@ select {
 #lightDark {
     float: right;
 }
+input#darkOn[type=radio]:checked + .container-fluid ~ .check
+{
+    background: #222;
+}
+input#darkOn[type=radio]:checked + .container-fluid form-group ~ .check
+{
+    color: #ff9933;
+}
+input#darkOn[type=radio]:checked + .container-fluid div ~ .check
+{
+    color: #aaa;
+}
