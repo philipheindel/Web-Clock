@@ -3,28 +3,34 @@
 require_once __DIR__ . "/../../controllers/helpers.php";
    		$servername = "127.0.0.1";
 		$username = "nathanlantz";
-		$password = "";
+		$passwordDB = "";
 		$dbname = "myDB";
     	$dbtable = "records";
         $conn;
            
            
-$conn = connection($servername, $username, $password);   
+//createDB($conn,$dbname);
+//createTable($conn,$dbname,$dbtable);
 
            
            
            
-           
-        /*   $emailLogin = $_POST['emailLogin'];
+           if (isset($_POST["createBtn"])){
+           $emailLogin = $_POST['emailLogin'];
            $passwordlogin = $_POST['passwordLogin'];
            $rememberme = $_POST['rememberMe'];
-           $firstname = $_POST['firstName'];
-           $lastname = $_POST['lastName'];
+           $fname = $_POST['fname'];
+           $lname = $_POST['lname'];
            $email = $_POST['emailInput'];
            $password = $_POST['passwordInput'];
            $verifyPassword = $_POST['verifyPassword'];
            
-       */
+           $conn = connectionDB($servername, $username, $passwordDB, $dbname);
+           addToTable($conn, $dbtable, $fname, $lname,$email,$password,$verifyPassword);
+           
+           }
+           
+       
    
 ?>
 
@@ -53,31 +59,31 @@ $conn = connection($servername, $username, $password);
                 </form>
             </div>
             <div id="createAccount" class="col">
-                <form>
+                <form action="" method="post">
                     <legend>Create Account</legend>
                     <hr/>
                     <div class="form-group">
                         <label for="firstName">First Name:</label>
-                        <input id="firstName" type="text" class="form-control" />
+                        <input id="firstName" name="fname" type="text" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="lastName">Last Name:</label>
-                        <input id="lastName" type="text" class="form-control" />
+                        <input id="lastName" name="lname" type="text" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="emailInput">Email:</label>
-                        <input id="emailInput" type="email" class="form-control" />
+                        <input id="emailInput" name="emailInput" type="email" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="passwordInput">Password:</label>
-                        <input id="passwordInput" type="password" class="form-control" />
+                        <input id="passwordInput" name="passwordInput" type="password" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="verifyPassword">Verify Password:</label>
-                        <input id="verifyPassword" type="password" class="form-control" />
+                        <input id="verifyPassword" name="verifyPassword" type="password" class="form-control" />
                     </div>
                     <div class="form-btn">
-                        <input class="btn btn-outline-primary" type="submit" value="Create Account" />
+                        <input class="btn btn-outline-primary" type="submit"  name="createBtn" value="Create Account" />
                     </div>
                 </form>
             </div>
