@@ -2,7 +2,7 @@
 
 ?>
 
-<body onload="showTheTime(); loadAjax('timeZone.php','#controlArea');">
+<body onload="startTime(); loadAjax('timeZone.php','#controlArea');">
     <div id="appBody" class="container-fluid">
         <div class="row">
             <div id="settingsCol" class="col menu-bar">
