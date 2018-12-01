@@ -40,6 +40,7 @@
         <script type="text/javascript" src="js/stopWatch.js"></script>
     <?php } else if ($title == SETTINGS_TITLE) {?>
         <link rel="stylesheet" href="css/settings.css" />
+        <<link rel="stylesheet" href="css/cancel.css" /> 
     <?php } else if ($title == LOGIN_TITLE) {?>
         <link rel="stylesheet" href="css/login.css" />
     <?php }?>
