@@ -3,7 +3,7 @@ function showTheTime(inputOffset)
 {
     
     var date = new Date();
-    var h = date.getHours();
+    var h = parseInt(date.getHours());
     var m = date.getMinutes();
     var s = date.getSeconds();
     var session = "AM";
@@ -17,8 +17,14 @@ function showTheTime(inputOffset)
 
     if(h>12)
     {
-       // h = h - 12;
+        
+        h = h - 12;
         session = "PM";
+    }
+     if(h>12)
+    {
+        h = h - 12;
+        session = "AM";
     }
     if(h==12)
     {

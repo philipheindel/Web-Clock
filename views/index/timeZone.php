@@ -20,10 +20,10 @@
             <option value="-4">(GMT -4:30) Caracas</option>
             <option value="-4">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
             <option value="-3">(GMT -3:30) Newfoundland</option>
-            <option value="-03">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+            <option value="-3">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
             <option value="-2">(GMT -2:00) Mid-Atlantic</option>
             <option value="-1">(GMT -1:00) Azores, Cape Verde Islands</option>
-            <option value="+">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+            <option value="0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
             <option value="+1">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
             <option value="+2">(GMT +2:00) Kaliningrad, South Africa</option>
             <option value="+3">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
