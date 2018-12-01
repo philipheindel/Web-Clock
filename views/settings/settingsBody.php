@@ -76,7 +76,6 @@
                 <div class="form-group">
                     
                     <label for="lightDark" class="control-label">Light/Dark</label>
-                    
                     <div id="lightDark" name="lightDark" class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-sm btn-outline-primary active">
                             <input id="lightOn" type="radio" name="options" autocomplete="off">
@@ -88,6 +87,29 @@
                         </label>
                     </div>
                     
+                </div>
+                
+                <!-- color picker header -->
+                <div class="btn-group">
+                    <label for="headerColor" class="control-label">Header Color </label>
+                    <div id="headerColor" name="headerColor" class="form-group">
+                        
+                          <input type="color" name="favcolor" value="#596a87">
+                          <button id="submitBtn" name="submitBtn" type="button" class="btn btn-sm btn-outline-primary">Submit</button>
+                    </div>
+                </div>
+                
+                <br>
+                <!-- color picker background -->
+                
+                
+                <div class="btn-group">
+                    <label for="backgroundColor" class="control-label">Background Color </label>
+                    <div id="backgroundColor" name="backgroundColor" class="form-group">
+                        
+                          <input type="color" name="favcolor" value="#ffffff">
+                          <button id="submitBtn" name="submitBtn" type="button" class="btn btn-sm btn-outline-primary">Submit</button>
+                    </div>
                 </div>
                 
                 
@@ -179,7 +201,7 @@
                          <a id="discardButton" name="discardButton" class="btn btn-outline-danger" href="../index/index.php">Discard Changes</a>
                     </div>
                 </div>
-
+                
             </fieldset>
         </form>
 
