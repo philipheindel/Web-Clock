@@ -6,7 +6,6 @@
     <div class="centerStopwatch">
     
  <form action="" method="post">
-        <h4>Simple stopwatch made in JavaScript</h4>
         <input type="button" onclick="startWatch()" class="btn btn-outline-success" value="START" />
         <input type="button" onclick="stopWatch()"  class="btn btn-outline-danger" value="STOP" />
         <input type="button" onclick="resetWatch()" class="btn btn-outline-primary" value="ZERO" />
