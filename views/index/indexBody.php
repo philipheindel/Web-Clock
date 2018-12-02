@@ -20,11 +20,11 @@
         <div class="row">
             <div class="col menu-bar main-content">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label onclick = "resetTime(); showTheTime24('0,0')" class="btn btn-sm btn-outline-primary" onmouseout="$('#twentyfourHour').blur()">
+                    <label onclick = "resetTime(); showTheTime24('-5,0')" class="btn btn-sm btn-outline-primary" onmouseout="$('#twentyfourHour').blur()">
                         <input  id="twentyfourHour" type="radio" name="options" autocomplete="off">
                         24 Hr.
                     </label>
-                    <label onclick = "resetTime(); showTheTime('0,0')"class="btn btn-sm btn-outline-primary active" onmouseout="$('#twelveHour').blur()">
+                    <label onclick = "resetTime(); showTheTime('-5,0')"class="btn btn-sm btn-outline-primary active" onmouseout="$('#twelveHour').blur()">
                         <input id="twelveHour" type="radio" name="options" autocomplete="off">
                         12 Hr.
                     </label>
