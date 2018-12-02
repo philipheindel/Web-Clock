@@ -24,6 +24,8 @@ button[type=remove-button] {
      left: 35%;
 }
 
+
+
 input[type=text] {
     width: 35%;
     padding: 8px 13px;
@@ -45,7 +47,7 @@ select {
 }
 
 #discardButton {
-    margin-right: 10px
+    margin-right: 10px;
 }
 
 #showSeconds {
@@ -57,15 +59,6 @@ select {
 #lightDark {
     float: right;
 }
-input#darkOn[type=radio]:checked + .container-fluid ~ .check
-{
-    background: #222;
-}
-input#darkOn[type=radio]:checked + .container-fluid form-group ~ .check
-{
-    color: #ff9933;
-}
-input#darkOn[type=radio]:checked + .container-fluid div ~ .check
-{
-    color: #aaa;
+#headerColor {
+    float: right;
 }

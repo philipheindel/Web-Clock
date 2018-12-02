@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../libraries/bootstrap-4.1.3-dist/css/bootstrap-grid.min.css"/>
     <link rel="stylesheet" href="../libraries/bootstrap-4.1.3-dist/css/bootstrap-reboot.min.css"/>
     <link rel="stylesheet" href="../libraries/material-icons/material-icons-styling.css"/>
+    <link rel="stylesheet" href="../settings/css/settingsMaster.css" />
     <script type="text/javascript" src="../libraries/jquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../libraries/popper/popper.min.js"></script>
     <script type="text/javascript" src="../libraries/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
