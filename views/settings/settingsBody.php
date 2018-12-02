@@ -1,5 +1,5 @@
 <?php
-
+    
 ?>
 
 <head>
@@ -24,6 +24,10 @@
         {
             background: #007bff;
         }
+        body {
+            background-color: #333333
+        }
+        
     </style>
 </head>
 
@@ -78,15 +82,14 @@
                     <label for="lightDark" class="control-label">Light/Dark</label>
                     <div id="lightDark" name="lightDark" class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-sm btn-outline-primary active">
-                            <input id="lightOn" type="radio" name="options" autocomplete="off">
+                            <input id="lightOn" type="radio" name="options" autocomplete="off" onclick="changeColour('l')">
                             Light
                         </label>
                         <label class="btn btn-sm btn-outline-primary">
-                            <input id="darkOn" type="radio" name="options" autocomplete="off">
+                            <input id="darkOn" type="radio" name="options" autocomplete="off" onclick="changeColour('d')">
                             Dark
                         </label>
                     </div>
-                    
                 </div>
                 
                 <!-- color picker header -->
@@ -206,4 +209,20 @@
         </form>
 
     </div>
+    <script>
+        function changeColour(value)
+        {
+            var color = document.body.style.backgroundColor;
+            switch(value)
+            {
+                case 'd':
+                    color = "#666666";
+                    break;
+                case 'l':
+                    color = "#FFFFFF";
+                    break;
+    }
+    document.body.style.backgroundColor = color;
+}
+    </script>
 </body>
