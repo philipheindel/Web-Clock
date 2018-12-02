@@ -1,34 +1,41 @@
 var timeout;
 function showTheTime(inputOffset)
 {
-   var myArray = listToArray(inputOffset, ',');
+     
     var date = new Date();
+    var ITZOffset = date.getTimezoneOffset();
+     var addOn = convertMinsToHrsMins(ITZOffset);
+     var offsetArray = listToArray(addOn, ',');
+   var myArray = listToArray(inputOffset, ',');
+    var initialOffsetHours = parseInt(offsetArray[0]);
+    var initialOffsetMinutes = parseInt(offsetArray[1]);
+    
     var h = parseInt(date.getHours());
     var m = parseInt(date.getMinutes());
     var s = date.getSeconds();
     var session = "AM";
-    var hoursoffset = parseInt(myArray[0]) + 5;
-    var minoffset = parseInt(myArray[1])
-     if(hoursoffset>-1)
+    var hoursoffset = parseInt(myArray[0]);
+    var minoffset = parseInt(myArray[1]);
+    var offsetH = hoursoffset + initialOffsetHours;
+    var offsetM = minoffset;
+     if(offsetH>-1)
      {
-     m = minoffset + m;
-     if(m>59)
-      {
+     m = offsetM + m + initialOffsetMinutes;
+        if(m>59)
+        {
           m = m - 60;
           h = h + 1;
-      }
+        }
      }
      else
      {
-        m = m - minoffset; 
+        offsetM = m + minoffset + initialOffsetMinutes;
          if(m<0)
-      {
-          m = m + 60;
-          h = h - 1;
-      }
+            {
+                m = m + 60;
+                h = h - 1;
+            }
      }
-      h =  hoursoffset + h;
-      
       var temp = h;
     //Test to see if it should be set to AM/PM
     if(h==0)
@@ -84,10 +91,18 @@ function resetTime()
 }
 function startTime(){
     
-    showTheTime("-5,0");
+    showTheTime("0,0");
+    
 }
 function showTheTime24(inputOffset)
 {
+    var date = new Date();
+    var ITZOffset = date.getTimezoneOffset();
+    var addOn = convertMinsToHrsMins(ITZOffset);
+    var offsetArray = listToArray(addOn, ',');
+    var initialOffsetHours = parseInt(offsetArray[0]);
+    var initialOffsetMinutes = parseInt(offsetArray[1]);
+     
     var myArray = listToArray(inputOffset, ',');
     var date = new Date();
     var h = parseInt(date.getHours());
@@ -100,7 +115,7 @@ function showTheTime24(inputOffset)
     var minoffset = parseInt(myArray[1])
      if(hoursoffset>-1)
      {
-     m = minoffset + m;
+     m = minoffset + m + initialOffsetMinutes;
      if(m>59)
       {
           m = m - 60;
@@ -109,7 +124,7 @@ function showTheTime24(inputOffset)
      }
      else
      {
-        m = m - minoffset; 
+        m = m - minoffset - initialOffsetMinutes; 
          if(m<0)
       {
           m = m + 60;
@@ -156,4 +171,11 @@ function listToArray(fullString, separator) {
   }
 
   return fullArray;
+}
+function convertMinsToHrsMins(minutes) {
+  var h = Math.floor(minutes / 60);
+  var m = minutes % 60;
+  h = h < 10 ?  h : h;
+  m = m < 10 ?  m : m;
+  return h + ',' + m;
 }
