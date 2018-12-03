@@ -1,22 +1,7 @@
 <?php
 
-    require_once("../../controllers/db_con.php");
-    $sqlPopulate = "select * from settings";
-    
-    $result = connect($sqlPopulate);
-    $row = mysql_fetch_row($result);
-    $rowCount =  mysql_num_rows($result);
-    
-    
-    //text color light theme used = #596a87
-    //back color light theme used = #ffffff
-    
-    //text color dark theme used = #ffd9b3
-    //back color dark theme used = #333333
-    
-    //initialize (right now just pulling the back and forground colors from database)
-    $backGroundCol = $row[1];
-    $foregroundCol = $row[2];
+    require_once("../../controllers/theme.php");
+    require_once("../../controllers/updateDB.php");
     
     
     
@@ -43,14 +28,18 @@ require_once __DIR__ . "/../../controllers/helpers.php";
 <header>
     <style>
         body{
-            background-color: <?php echo $backGroundCol ?>;
+            background-color: <?php echo $back ?>;
         }
         
         legend {
-            color:  <?php echo $foregroundCol?>;
+            color:  <?php echo $front ?>;
         }
         label {
-            color: <?php echo $foregroundCol?>;
+            color: <?php echo $front ?>;
+        }
+        
+        hr {
+            color: <?php echo $front ?>;
         }
     </style>
 </header>

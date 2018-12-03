@@ -1,6 +1,11 @@
 <?php
     require_once("../../controllers/theme.php");
     require_once("../../controllers/updateDB.php");
+    
+    
+    if(isset($_POST["darkBtn"])) { set0() ;}
+    if(isset($_POST["lightBtn"])) { set1() ;}
+    
 ?>
 
 <head>
@@ -53,7 +58,7 @@
 
 <body>
     <div class="container-fluid">
-        <form >
+        <form action="" method="post">
             <fieldset>
                 <legend id = "heading">Settings</legend>
                 <hr>
@@ -64,8 +69,8 @@
                 
                 <div class="form-group">
                     <label for="lightDark" class="control-label">Light/Dark</label>    
-                    <a id="lightBtn" name="lightBtn" class="btn btn-outline-primary" href="../settings/settings.php" onclick="<?php set1(); ?>">Light</a>
-                    <a id="darkBtn" name="darkBtn" class="btn btn-outline-primary" href="../settings/settings.php" onclick="<?php set0(); ?>">Dark</a>
+                    <input id="lightBtn" name="lightBtn" class="btn btn-outline-primary" type="submit" href="../settings/settings.php" value = "Light"></input>
+                    <input id="darkBtn" name="darkBtn" class="btn btn-outline-primary" type="submit" href="../settings/settings.php" value = "Dark"></input>
                 </div>
                 
                 
@@ -161,14 +166,6 @@
                          <a id="discardButton" name="discardButton" class="btn btn-outline-danger" href="../index/index.php">Discard Changes</a>
                     </div>
                 </div>
-                
-                
-                
-                <!-- trying to update current useres settings in data base -->
-               
-                
-                
-                
             </fieldset>
         </form>
 

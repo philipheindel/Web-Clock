@@ -1,7 +1,25 @@
 <?php
-
+    require_once("../../controllers/theme.php");
+    require_once("../../controllers/updateDB.php");
 ?>
-
+<header>
+    <style>
+        body{
+            background-color: <?php echo $back ?>;
+        }
+        
+        legend {
+            color:  <?php echo $front ?>;
+        }
+        label {
+            color: <?php echo $front ?>;
+        }
+        
+        hr {
+            color: <?php echo $front ?>;
+        }
+    </style>
+</header>
 <body onload="startTime(); loadAjax('timeZone.php','#controlArea');">
     <div id="appBody" class="container-fluid">
         <div class="row">
