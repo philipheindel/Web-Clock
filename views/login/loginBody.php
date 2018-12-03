@@ -1,10 +1,32 @@
 <?php
 
+    require_once("../../controllers/db_con.php");
+    $sqlPopulate = "select * from settings";
+    
+    $result = connect($sqlPopulate);
+    $row = mysql_fetch_row($result);
+    $rowCount =  mysql_num_rows($result);
+    
+    
+    //text color light theme used = #596a87
+    //back color light theme used = #ffffff
+    
+    //text color dark theme used = #ffd9b3
+    //back color dark theme used = #333333
+    
+    //initialize (right now just pulling the back and forground colors from database)
+    $backGroundCol = $row[1];
+    $foregroundCol = $row[2];
+    
+    
+    
+
+
 require_once __DIR__ . "/../../controllers/helpers.php";
-   		$servername = "127.0.0.1";
-		$username = "nathanlantz";
-		$passwordDB = "";
-		$dbname = "myDB";
+   		$servername = "localhost";
+		$username = "temp";
+		$passwordDB = "temp";
+		$dbname = "temp";
     	$dbtable = "records";
         $conn;
            
@@ -18,7 +40,20 @@ require_once __DIR__ . "/../../controllers/helpers.php";
        
    
 ?>
-
+<header>
+    <style>
+        body{
+            background-color: <?php echo $backGroundCol ?>;
+        }
+        
+        legend {
+            color:  <?php echo $foregroundCol?>;
+        }
+        label {
+            color: <?php echo $foregroundCol?>;
+        }
+    </style>
+</header>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -56,12 +91,16 @@ require_once __DIR__ . "/../../controllers/helpers.php";
                         
                         if(loginChecker($conn,$dbtable,$emailLogin,$passwordlogin)==true){
                             
+<<<<<<< HEAD
                             if(empty($_POST['emailLogin']) || empty($_POST['passwordLogin'])){
                             echo "Please enter a email and password";
                             }
                             else{
                         //sends back to main page   
                          header('Location: /views/index/index.php');   
+=======
+                            
+>>>>>>> 422c771bd3459341e36c6899f8548676c5cb64d2
                         //successful login statement HERE HERE    
                             
                         echo "Correct Login!";
