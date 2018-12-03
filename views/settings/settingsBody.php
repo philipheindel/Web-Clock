@@ -1,54 +1,23 @@
 <?php
-    require_once("func.php");
     require_once("../../controllers/db_con.php");
-    $sqlPopulate = "select * from settings";
+    $sql1 = "select * from settings WHERE id = 1";
+    $sql2 = "select * from settings WHERE id = 2";
     
-    $result = connect($sqlPopulate);
-    $row = mysql_fetch_row($result);
-    $rowCount =  mysql_num_rows($result);
+    $result1 = connect($sql1);
+    $row1 = mysql_fetch_row($result1);
+    $backlight = $row1[1];
+    $forelight = $row1[2];
     
-    
+    $result2 = connect($sql2);
+    $row2 = mysql_fetch_row($result2);
+    $backdark = $row2[1];
+    $foredark= $row2[2];
+
     //text color light theme used = #596a87
     //back color light theme used = #ffffff
     
     //text color dark theme used = #ffd9b3
     //back color dark theme used = #333333
-    
-    //initialize (right now just pulling the back and forground colors from database)
-    $backGroundCol = $row[1];
-    $foregroundCol = $row[2];
-    
-    
-    
-    
-    
-    
-    
-    // connect with helper to see if i can figure out how to push to database
-    require_once __DIR__ . "/../../controllers/helpers.php";
-   		$servername = "localhost";
-		$username = "temp";
-		$passwordDB = "temp";
-		$dbname = "temp";
-    	$dbtable = "settings";
-        $conn;
-        
-        $conn = connectionDB($servername, $username, $passwordDB, $dbname);
-        
-        
-        // variables initialized
-        $postBackcolor;
-        $postHeadercolor;
-        $secSwitch = "on";
-        $apSwitch = "am";
-        $sound = "none";
-        $emailNotif = "no";
-        $browserNotif = "no";
-    
-        $userid = 1;
-    
-   
-    
 ?>
 
 <head>
@@ -80,18 +49,18 @@
             alllows me to initialize based off variables pulled from database.
         */
         body{
-            background-color: <?php echo $backGroundCol ?>;
+            background-color: <?php echo $backdark ?>;
         }
         
         legend {
-            color:  <?php echo $foregroundCol ?>;
+            color:  <?php echo $foredark ?>;
         }
         label {
-            color: <?php echo $foregroundCol ?>;
+            color: <?php echo $foredark ?>;
         }
         
         hr {
-            color: <?php echo $foregroundCol ?>;
+            color: <?php echo $foredark ?>;
         }
         
        
@@ -112,48 +81,48 @@
                     <label class="control-label" for="accSettings">Display Settings</label>
                 </div>
                 
-                <!-- show seconds switch -->
+                <!-- show seconds switch
                 
                 <div class="form-group">
                     <label for="showSeconds" class="control-label">Show Seconds</label>
                     <div id="showSeconds" name="showSeconds" class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-sm btn-outline-primary active">
                             
-                                                                                                                    <!-- in each button on click i tried to update
-                                                                                                                    variables (doesnt seem to work)-->
-                            <input id="secOn" type="radio" name="secRd" autocomplete="off" value="On" onclick="<?php $secSwitch = "on"?>">
+                                                                                                                     in each button on click i tried to update
+                                                                                                                    variables (doesnt seem to work)
+                            <input id="secOn" type="radio" name="secRd" autocomplete="off" value="On" onclick="">
                             On
                         </label>
                         <label class="btn btn-sm btn-outline-primary">
                             
-                                                                                                                        <!-- in each button on click i tried to update
-                                                                                                                    variables (doesnt seem to work)-->
-                            <input id="secOff" type="radio" name="secRd" autocomplete="off" value="Off" onclick="<?php $secSwitch = "off"?>">
+                                                                                                                         in each button on click i tried to update
+                                                                                                                    variables (doesnt seem to work)
+                            <input id="secOff" type="radio" name="secRd" autocomplete="off" value="Off" onclick="">
                             Off
                         </label>
                     </div>
                 </div>
+                 -->
+
+                <!-- AM/PM switch 
 
 
-                <!-- AM/PM switch -->
-
-
-                                                        <!-- in each button on click i tried to update
-                                                           variables (doesnt seem to work)-->
+                                                         in each button on click i tried to update
+                                                           variables (doesnt seem to work)
                 <div class="form-group">
                     <label for="showAmPm" class="control-label">Show AM/PM</label>
                     <div id="showAmPm" name="showAmPm" class="btn-group btn-group-toggle" data-toggle="buttons" >
                         <label class="btn btn-sm btn-outline-primary active">
-                            <input id="showAP" type="radio" name="apOp" autocomplete="off" value="am" onclick="<?php $apSwitch = "am"?>">
+                            <input id="showAP" type="radio" name="apOp" autocomplete="off" value="am" onclick="">
                             AM
                         </label>
                         <label class="btn btn-sm btn-outline-primary">
-                            <input id="hideAP" type="radio" name="apOp" autocomplete="off" value="pm" onclick="<?php $apSwitch = "pm"?>">
+                            <input id="hideAP" type="radio" name="apOp" autocomplete="off" value="pm" onclick="">
                             PM
                         </label>
                     </div>
                 </div>
-
+                -->
 
 
 
@@ -165,13 +134,11 @@
                     <label for="lightDark" class="control-label">Light/Dark</label>
                     <div id="lightDark" name="lightDark" class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-sm btn-outline-primary active">
-                            <input id="lightOn" type="radio" name="ldOp" autocomplete="off" value="light" onclick="<?php $postBackcolor = '#ffffff';    
-                                                                                                                         $postHeadercolor = '#596a87';?>">
+                            <input id="lightOn" type="radio" name="ldOp" autocomplete="off" value="light" onclick="">
                             Light
                         </label>
                         <label class="btn btn-sm btn-outline-primary">
-                            <input id="darkOn" type="radio" name="ldOp" autocomplete="off" value="dark"onclick="<?php $postBackcolor = '#333333';
-                                                                                                                      $postHeadercolor = '#ffffff';?>">
+                            <input id="darkOn" type="radio" name="ldOp" autocomplete="off" value="dark"onclick="">
                             Dark
                         </label>
                     </div>
@@ -236,8 +203,11 @@
                         <input type="checkbox" class="form-check-input" id="check1" name="check1">
                         <label class="form-check-label" for="check1">Email Notifications</label>
                         <br>
+                        
+                        <!--
                         <input type="checkbox" class="form-check-input" id="check2" name="check2">
                         <label class="form-check-label" for="check2">Browser Notifications</label>
+                        -->
                     </div>
                 </div>
 
