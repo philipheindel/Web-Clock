@@ -1,4 +1,4 @@
-/* The popup form - hidden by default */
+/* The popup form - hidden by default 
 .form-popup {
   display: none;
   position: fixed;
@@ -8,13 +8,13 @@
   z-index: 9;
 }
 
-/* Add styles to the form container */
+ Add styles to the form container 
 .form-container {
   max-width: 150px;
   padding: 10px;
   background-color: blue;
 }
-
+*/
 /* Full-width input fields 
 .form-container input[type=text], .form-container input[type=password] {
   width: 100%;
@@ -32,7 +32,7 @@
 }
 */
 
-/* Set a style for the submit/login button */
+/* Set a style for the submit/login button 
 .form-container .btn {
   background-color: #4CAF50;
   color: white;
@@ -43,7 +43,7 @@
   margin-bottom:10px;
   
 }
-
+*/
 /* Add a red background color to the cancel button 
 .form-container .cancel {
   background-color: red;
