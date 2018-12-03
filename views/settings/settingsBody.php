@@ -1,4 +1,5 @@
 <?php
+    require_once("func.php");
     require_once("../../controllers/db_con.php");
     $sqlPopulate = "select * from settings";
     
@@ -17,62 +18,36 @@
     $backGroundCol = $row[1];
     $foregroundCol = $row[2];
     
-    $postBackcolor;
-    $postHeadercolor;
-    $secSwitch;
-    $apSwitch;
-    $sound;
-    $emailNotif;
-    $browserNotif;
     
-    $userid = 1;
     
-    //store all values when save button is clicked (not working correctly)
-    if (isset($_POST["saveButton"])){
-            if ($_POST['secRd'] == "On") {          
-                $secSwitch = 'yes';      
-            }
-            else {
-                $secSwitch = 'no';
-            }   
-            if ($_POST['apOp'] == "am") {          
-                $apSwitch = 'am';      
-            }
-            else {
-                $apSwitch = 'pm';
-            } 
-            if ($_POST['ldOp'] == "lgiht") {          
-                $postBackcolor = '#ffffff';    
-                $postHeadercolor = '#596a87';
-            }
-            else {
-                $postBackcolor = '#333333';
-                $postHeadercolor = '#ffffff';
-            } 
-            
-            $sound = $_POST['selectSound'];
-            
-            if (isset($_POST['check1'])){
-                $emailNotif = "yes";
-            }
-            else{
-                $emailNotif = "no";
-            }
-            if (isset($_POST['check2'])){
-                $browserNotif = "yes";
-            }
-            else{
-                $browserNotif = "no";
-            }
-            
-           
-           //database isnt updated :/
-           $sql = sprintf("UPDATE `temp`.`settings` SET `backgroundcol` =  '$postBackcolor',
-                        `headercol` =  '$postHeadercolor', `showsec` = '', `showap` = '', `sound` = '', `emailnotif` = '', `browsernotif` ''
-                        WHERE `settings`.`id` = '$userid';");
-          
-           updateDB($sql);
-    }
+    
+    
+    
+    
+    // connect with helper to see if i can figure out how to push to database
+    require_once __DIR__ . "/../../controllers/helpers.php";
+   		$servername = "localhost";
+		$username = "temp";
+		$passwordDB = "temp";
+		$dbname = "temp";
+    	$dbtable = "settings";
+        $conn;
+        
+        $conn = connectionDB($servername, $username, $passwordDB, $dbname);
+        
+        
+        // variables initialized
+        $postBackcolor;
+        $postHeadercolor;
+        $secSwitch = "on";
+        $apSwitch = "am";
+        $sound = "none";
+        $emailNotif = "no";
+        $browserNotif = "no";
+    
+        $userid = 1;
+    
+   
     
 ?>
 
@@ -102,6 +77,7 @@
         
         /*
             set background and text to the colors initialized from database.
+            alllows me to initialize based off variables pulled from database.
         */
         body{
             background-color: <?php echo $backGroundCol ?>;
@@ -142,11 +118,17 @@
                     <label for="showSeconds" class="control-label">Show Seconds</label>
                     <div id="showSeconds" name="showSeconds" class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-sm btn-outline-primary active">
-                            <input id="secOn" type="radio" name="secRd" autocomplete="off" value="On">
+                            
+                                                                                                                    <!-- in each button on click i tried to update
+                                                                                                                    variables (doesnt seem to work)-->
+                            <input id="secOn" type="radio" name="secRd" autocomplete="off" value="On" onclick="<?php $secSwitch = "on"?>">
                             On
                         </label>
                         <label class="btn btn-sm btn-outline-primary">
-                            <input id="secOff" type="radio" name="secRd" autocomplete="off" value="Off">
+                            
+                                                                                                                        <!-- in each button on click i tried to update
+                                                                                                                    variables (doesnt seem to work)-->
+                            <input id="secOff" type="radio" name="secRd" autocomplete="off" value="Off" onclick="<?php $secSwitch = "off"?>">
                             Off
                         </label>
                     </div>
@@ -155,32 +137,41 @@
 
                 <!-- AM/PM switch -->
 
+
+                                                        <!-- in each button on click i tried to update
+                                                           variables (doesnt seem to work)-->
                 <div class="form-group">
                     <label for="showAmPm" class="control-label">Show AM/PM</label>
-                    <div id="showAmPm" name="showAmPm" class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <div id="showAmPm" name="showAmPm" class="btn-group btn-group-toggle" data-toggle="buttons" >
                         <label class="btn btn-sm btn-outline-primary active">
-                            <input id="showAP" type="radio" name="apOp" autocomplete="off" value="am">
+                            <input id="showAP" type="radio" name="apOp" autocomplete="off" value="am" onclick="<?php $apSwitch = "am"?>">
                             AM
                         </label>
                         <label class="btn btn-sm btn-outline-primary">
-                            <input id="hideAP" type="radio" name="apOp" autocomplete="off" value="pm">
+                            <input id="hideAP" type="radio" name="apOp" autocomplete="off" value="pm" onclick="<?php $apSwitch = "pm"?>">
                             PM
                         </label>
                     </div>
                 </div>
 
 
+
+
+                                                         <!-- in each button on click i tried to update
+                                                           variables (doesnt seem to work)-->
                 <!-- Light and dark theme switch -->
                 <div class="form-group">
                     
                     <label for="lightDark" class="control-label">Light/Dark</label>
                     <div id="lightDark" name="lightDark" class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-sm btn-outline-primary active">
-                            <input id="lightOn" type="radio" name="ldOp" autocomplete="off" value="light">
+                            <input id="lightOn" type="radio" name="ldOp" autocomplete="off" value="light" onclick="<?php $postBackcolor = '#ffffff';    
+                                                                                                                         $postHeadercolor = '#596a87';?>">
                             Light
                         </label>
                         <label class="btn btn-sm btn-outline-primary">
-                            <input id="darkOn" type="radio" name="ldOp" autocomplete="off" value="dark">
+                            <input id="darkOn" type="radio" name="ldOp" autocomplete="off" value="dark"onclick="<?php $postBackcolor = '#333333';
+                                                                                                                      $postHeadercolor = '#ffffff';?>">
                             Dark
                         </label>
                     </div>
@@ -274,6 +265,37 @@
                          <a id="discardButton" name="discardButton" class="btn btn-outline-danger" href="../index/index.php">Discard Changes</a>
                     </div>
                 </div>
+                
+                
+                
+                <!-- trying to update current useres settings in data base -->
+                <?php
+                //store all values when save button is clicked (not working correctly)
+                if (isset($_POST["saveButton"])){
+           
+                    $sound = $_POST['selectSound'];
+            
+                    if (isset($_POST['check1'])){
+                        $emailNotif = "yes";
+                    }
+                    else{
+                        $emailNotif = "no";
+                    }
+                    if (isset($_POST['check2'])){
+                        $browserNotif = "yes";
+                    }
+                    else{
+                        $browserNotif = "no";
+                    }
+            
+           
+                    updateRow($conn, $postBackcolor, $postHeadercolor, $secSwitch, $apSwitch, $sound, $emailNotif, $browserNotif , $userid);
+          
+                }
+                ?>
+                
+                
+                
             </fieldset>
         </form>
 
