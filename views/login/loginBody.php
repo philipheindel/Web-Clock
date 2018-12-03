@@ -56,11 +56,17 @@ require_once __DIR__ . "/../../controllers/helpers.php";
                         
                         if(loginChecker($conn,$dbtable,$emailLogin,$passwordlogin)==true){
                             
-                         //sends back to main page   
+                            if(empty($_POST['emailLogin']) || empty($_POST['passwordLogin'])){
+                            echo "Please enter a email and password";
+                            }
+                            else{
+                        //sends back to main page   
                          header('Location: /views/index/index.php');   
                         //successful login statement HERE HERE    
                             
                         echo "Correct Login!";
+                                
+                            }
                         }
                         else{
                             echo "Incorrect Username or Password";
@@ -109,21 +115,36 @@ require_once __DIR__ . "/../../controllers/helpers.php";
            $email = filter_var($_POST['emailInput'], FILTER_SANITIZE_STRING);
            $password = filter_var($_POST['passwordInput'], FILTER_SANITIZE_STRING);
            $verifyPassword = filter_var($_POST['verifyPassword'], FILTER_SANITIZE_STRING);
-        
-        
+           
+           if (empty($_POST['fname']) || empty($_POST['lname']) || empty($_POST['emailInput']) || empty($_POST['passwordInput']) || empty($_POST['verifyPassword'])){
+               echo "Please fill out form!";
+           }
+           else {
+               if($_POST['passwordInput']==$_POST['verifyPassword']){
+                   
             if ($email==compare($conn, $email, $dbtable)){
-            echo "Account already created!";
-            
-        }
-        else{
+            echo "Account already created!";    
+               }
+                       else{
             
          addToTable($conn, $dbtable, $fname, $lname,$email,$password,$verifyPassword);    
+            
+        }
+               }
+               
+               else{
+                   
+                   echo "password and verifyPassword must match";
+ 
+               }
+               
+           
             
         }
              
            
            }
-           
+            
                        
                        
                        ?> 
