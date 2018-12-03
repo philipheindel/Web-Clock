@@ -8,8 +8,8 @@
             <label for="placeHolder">:</label>
         <input class="form-control" type="text" id="alarmMinutes" name="minutes" maxlength="2" placeholder="M">
     </div>
-
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    
+    <div class="btn-group btn-group-toggle buttons" data-toggle="buttons">
         <label class="btn btn-sm btn-outline-primary active ">
             <input id="selectAm" type="radio" name="options" autocomplete="off">
             AM
@@ -20,9 +20,9 @@
         </label>
     </div>
 
-    <div class="buttons">
-        <button type="button" class="btn btn-outline-success"> &nbspSet &nbsp</button>
-        <button type="button" class="btn btn-outline-danger">Clear</button>
+    <div>
+        <button id="setAlarmButton" type="button" class="btn btn-outline-success" onclick="setAlarm();">&nbsp; Set &nbsp;</button>
+        <button id="clearAlarmButton" type="button" class="btn btn-outline-danger" onclick="clearAlarm();">Clear</button>
     </div>
 
 </body>
