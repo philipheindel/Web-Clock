@@ -8,28 +8,13 @@ require_once __DIR__ . "/../../controllers/helpers.php";
     	$dbtable = "records";
         $conn;
            
-           
+        $conn = connectionDB($servername, $username, $passwordDB, $dbname);
 //createDB($conn,$dbname);
 //createTable($conn,$dbname,$dbtable);
 
-           
-           
-           
-           if (isset($_POST["createBtn"])){
-           $emailLogin = $_POST['emailLogin'];
-           $passwordlogin = $_POST['passwordLogin'];
-           $rememberme = $_POST['rememberMe'];
-           $fname = $_POST['fname'];
-           $lname = $_POST['lname'];
-           $email = $_POST['emailInput'];
-           $password = $_POST['passwordInput'];
-           $verifyPassword = $_POST['verifyPassword'];
-           
-           $conn = connectionDB($servername, $username, $passwordDB, $dbname);
-           addToTable($conn, $dbtable, $fname, $lname,$email,$password,$verifyPassword);
-           
-           }
-           
+  
+         
+
        
    
 ?>
@@ -38,24 +23,52 @@ require_once __DIR__ . "/../../controllers/helpers.php";
     <div class="container-fluid">
         <div class="row">
             <div id="loginForm" class="col">
-                <form>
+                <form action="" method="post">
                     <legend>Login</legend>
                     <hr/>
                     <div class="form-group">
                         <label for="emailLogin">Email:</label>
-                        <input id="emailLogin" type="email" class="form-control" />
+                        <input id="emailLogin" name="emailLogin" type="email" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="passwordLogin">Password:</label>
-                        <input id="passwordLogin" type="password" class="form-control" />
+                        <input id="passwordLogin" name ="passwordLogin" type="password" class="form-control" />
                     </div>
                     <div class="form-group form-check">
                         <input id="rememberMe" type="checkbox" class="form-check-input" />
-                        <label for="rememberMe" class="form-check-label">Remember Me</label>
+                        <label for="rememberMe" name="rememberMe"; class="form-check-label">Remember Me</label>
                     </div>
                     <div class="form-btn">
-                        <input class="btn btn-outline-primary" type="submit" value="Login" />
+                        <input class="btn btn-outline-primary" type="submit" name="loginBtn" value="Login" />
                     </div>
+                    <div>
+                        <?php
+           
+                        if (isset($_POST["loginBtn"])){
+                            
+                            
+         $emailLogin = $_POST['emailLogin'];
+          $passwordlogin = $_POST['passwordLogin'];
+          $rememberme = $_POST['rememberMe'];    
+                            
+                            
+                            
+                        
+                        if(loginChecker($conn,$dbtable,$emailLogin,$passwordlogin)==true){
+                            
+                            
+                        //successful login statement HERE HERE HERE    
+                            
+                        echo "Correct Login!";
+                        }
+                        else{
+                            echo "Incorrect Username or Password";
+                        }
+                        }
+                        ?>
+                    </div>
+                    
+                    
                 </form>
             </div>
             <div id="createAccount" class="col">
@@ -85,6 +98,37 @@ require_once __DIR__ . "/../../controllers/helpers.php";
                     <div class="form-btn">
                         <input class="btn btn-outline-primary" type="submit"  name="createBtn" value="Create Account" />
                     </div>
+                    <div>
+                       <?php
+                       
+                                  if (isset($_POST["createBtn"])){
+               
+           $fname = $_POST['fname'];
+           $lname = $_POST['lname'];
+           $email = $_POST['emailInput'];
+           $password = $_POST['passwordInput'];
+           $verifyPassword = $_POST['verifyPassword'];
+        
+        
+            if ($email==compare($conn, $email, $dbtable)){
+            echo "Account already created!";
+            
+        }
+        else{
+            
+         addToTable($conn, $dbtable, $fname, $lname,$email,$password,$verifyPassword);    
+            
+        }
+             
+           
+           }
+           
+                       
+                       
+                       ?> 
+                        
+                    </div>
+                    
                 </form>
             </div>
         </div>

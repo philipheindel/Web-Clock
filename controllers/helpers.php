@@ -25,10 +25,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     echo "<br>";
 } 
-else{
-  echo "success";
-  echo "<br>";
-}
     
 return $conn;
 }
@@ -40,10 +36,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     echo "<br>";
 } 
-else{
-  echo "success";
-  echo "<br>";
-}
+
     
 return $conn;
 }
@@ -94,9 +87,53 @@ $sql = "INSERT INTO $dbtable (fName, lName, email, password, verifyPassword)
 VALUES ('$fname','$lname','$email','$password','$verifyPassword')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Account created!";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+    
+}
+
+function compare($conn, $compareemail, $dbtable){
+    
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+    
+    
+   
+ $sql = "SELECT * FROM `$dbtable` WHERE email='$compareemail'";   
+
+ $var = $conn->query($sql);
+ $result = $var->fetch_assoc();
+ 
+    return $result[email];
+    
+    
+}
+
+function loginChecker($conn,$dbtable,$login,$password){
+   
+ 
+$sql = "SELECT * FROM `$dbtable` WHERE email='$login'";
+ $var = $conn->query($sql);
+ $result = $var->fetch_assoc();
+
+ 
+ $sql1 = "SELECT * FROM `$dbtable` WHERE email='$login'";
+ $var1 = $conn->query($sql1);
+ $result1 = $var1->fetch_assoc();
+ 
+ 
+$email= $result[email];  
+$pass= $result1[password];
+
+if($email==$login && $pass == $password){
+    return true;
+}
+else {
+    return false;
+}
+    
     
 }
