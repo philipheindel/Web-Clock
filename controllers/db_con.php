@@ -10,19 +10,10 @@
     
     function updateDB($initSQL)
     {
-        $con = new mysqli("localhost","temp","temp");
-        if($con->connect_error)
-        {
-            die("connection failed: " . $con->connect_error);
-        }
+       $result = mysql_query($initSQL);
         
-        if($con->query($initSQL) === TRUE)
-        {
-            
-        }
-        
-        $con->close();
-        
+    
+        return $result;    
     }
 
 ?>

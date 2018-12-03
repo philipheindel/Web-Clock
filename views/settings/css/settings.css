@@ -3,11 +3,12 @@ body {
     padding: 20px;
 }
 
-/*
-legend {
-    color:  #596a87;
+
+button {
+
+    float: right;
 }
-*/
+
 a {
     padding: 7px;
     margin: auto;
@@ -46,9 +47,8 @@ select {
 #showAmPm {
     float: right;
 }
-#lightDark {
-    float: right;
-}
+
+
 #deleteButton {
     float: right;
 }

@@ -94,6 +94,26 @@ if ($conn->query($sql) === TRUE) {
     
 }
 
+function updateRow($conn, $postBackcolor, $postHeadercolor, $secSwitch, $apSwitch, $sound, $emailNotif, $browserNotif , $userid)
+{
+    //function used for adding info into the table    
+    
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "UPDATE `temp`.`settings` SET `backgroundcol` =  '$postBackcolor',
+        `headercol` =  '$postHeadercolor', `showsec` = '$secSwitch', `showap` = '$apSwitch',
+        `sound` = '$sound', `emailnotif` = '$emailNotif', `browsernotif` '$browserNotif'
+            WHERE `settings`.`id` = '$userid';";
+
+if ($conn->query($sql) === TRUE) {
+    echo "updated!";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+}
+
 function compare($conn, $compareemail, $dbtable){
     
     if ($conn->connect_error) {
