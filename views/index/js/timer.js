@@ -29,7 +29,7 @@ function setTimer()
     if(current == 0)
     {    
         clearInterval(timer);
-        document.getElementById("output").innerHTML = "0h 0m 0s";
+        document.getElementById("timerOut").innerHTML = "0h 0m 0s";
         alert("Timer is up!");
     }
     else
@@ -38,7 +38,7 @@ function setTimer()
         var minutes = Math.floor((current/60)%60);
         var seconds = Math.floor(current % 60);
 
-        document.getElementById("output").innerHTML = hours +"h " + minutes + "m " + seconds + " s";
+        document.getElementById("timerOut").innerHTML = hours +"h " + minutes + "m " + seconds + "s";
         
         current--;
     }

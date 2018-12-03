@@ -27,3 +27,7 @@ label{
 body {
     border-radius: 5px;
 }
+#timerOut{
+    font-size: 60px;
+    
+}

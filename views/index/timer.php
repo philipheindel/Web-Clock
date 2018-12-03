@@ -18,9 +18,8 @@
         <button type="button" onclick = "stopTimer();" class="btn btn-outline-danger">Stop</button>
        
     </div>
-    <div>
-        <p id = "output"></p>
-    
+    <div class = "timerOutput">
+        <span id = "timerOut"></span>
     </div>
 </body>
 
