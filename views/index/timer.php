@@ -19,7 +19,8 @@
        
     </div>
     <div>
-        <p id = "timer_value"></p>
+        <p id = "output"></p>
+    
     </div>
 </body>
 
