@@ -17,9 +17,9 @@
             <option value="-7,0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
             <option value="-6,0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
             <option value="-5,0" selected="selected">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
-            <option value="-4,-30">(GMT -4:30) Caracas</option>
+            <option value="-5,30">(GMT -4:30) Caracas</option>
             <option value="-4,0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
-            <option value="-3,-30">(GMT -3:30) Newfoundland</option>
+            <option value="-4,30">(GMT -3:30) Newfoundland</option>
             <option value="-3,0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
             <option value="-2,0">(GMT -2:00) Mid-Atlantic</option>
             <option value="-1,0">(GMT -1:00) Azores, Cape Verde Islands</option>
