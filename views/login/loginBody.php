@@ -47,9 +47,9 @@ require_once __DIR__ . "/../../controllers/helpers.php";
                         if (isset($_POST["loginBtn"])){
                             
                             
-         $emailLogin = $_POST['emailLogin'];
-          $passwordlogin = $_POST['passwordLogin'];
-          $rememberme = $_POST['rememberMe'];    
+         $emailLogin = filter_var($_POST['emailLogin'], FILTER_SANITIZE_STRING);
+          $passwordlogin = filter_var($_POST['passwordLogin'], FILTER_SANITIZE_STRING);
+          $rememberme = filter_var($_POST['rememberMe'], FILTER_SANITIZE_STRING);    
                             
                             
                             
@@ -57,7 +57,7 @@ require_once __DIR__ . "/../../controllers/helpers.php";
                         if(loginChecker($conn,$dbtable,$emailLogin,$passwordlogin)==true){
                             
                             
-                        //successful login statement HERE HERE HERE    
+                        //successful login statement HERE HERE    
                             
                         echo "Correct Login!";
                         }
@@ -103,11 +103,11 @@ require_once __DIR__ . "/../../controllers/helpers.php";
                        
                                   if (isset($_POST["createBtn"])){
                
-           $fname = $_POST['fname'];
-           $lname = $_POST['lname'];
-           $email = $_POST['emailInput'];
-           $password = $_POST['passwordInput'];
-           $verifyPassword = $_POST['verifyPassword'];
+           $fname = filter_var($_POST['fname'], FILTER_SANITIZE_STRING);
+           $lname = filter_var($_POST['lname'], FILTER_SANITIZE_STRING);
+           $email = filter_var($_POST['emailInput'], FILTER_SANITIZE_STRING);
+           $password = filter_var($_POST['passwordInput'], FILTER_SANITIZE_STRING);
+           $verifyPassword = filter_var($_POST['verifyPassword'], FILTER_SANITIZE_STRING);
         
         
             if ($email==compare($conn, $email, $dbtable)){
