@@ -5,6 +5,12 @@ function startTimer()
     var h = parseInt(document.getElementById('timerHours').value);
     var m = parseInt(document.getElementById('timerMinutes').value);
     var s = parseInt(document.getElementById('timerSeconds').value);
+   
+    if(isNaN(h) || isNaN(m) || isNaN(s))
+    {
+        alert("You must input numbers!");
+        return false;
+    }
     
     current = ((h*3600) + (m*60) + s);
     timer = setInterval(setTimer,1000);
