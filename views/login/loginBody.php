@@ -56,7 +56,8 @@ require_once __DIR__ . "/../../controllers/helpers.php";
                         
                         if(loginChecker($conn,$dbtable,$emailLogin,$passwordlogin)==true){
                             
-                            
+                         //sends back to main page   
+                         header('Location: /views/index/index.php');   
                         //successful login statement HERE HERE    
                             
                         echo "Correct Login!";
