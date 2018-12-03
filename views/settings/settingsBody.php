@@ -114,6 +114,10 @@
             color: <?php echo $foregroundCol ?>;
         }
         
+        hr {
+            color: <?php echo $foregroundCol ?>;
+        }
+        
        
     </style>
     <script>
@@ -129,7 +133,7 @@
                 <legend id = "heading">Settings</legend>
                 <hr>
                 <div class="form-group">
-                    <label class="control-label" for="accSettings"><font color="<?php echo $foregroundCol ?>"> Display Settings</font></label>
+                    <label class="control-label" for="accSettings">Display Settings</label>
                 </div>
                 
                 <!-- show seconds switch -->
@@ -186,7 +190,7 @@
                 
                 
                 <div class="form-group">
-                    <label class="control-label" for="accSettings"><font color="<?php echo $foregroundCol ?>">Account Settings</font></label>
+                    <label class="control-label" for="accSettings">Account Settings</label>
                 </div>
 
                 <!-- Display Name -->
@@ -213,7 +217,7 @@
 
 
                 <div class="form-group">
-                    <label class="control-label" for="accSettings"><font color="<?php echo $foregroundCol ?>">Notification Settings</font></label>
+                    <label class="control-label" for="accSettings">Notification Settings</label>
                 </div>
 
                 <!-- Select Alarm Sound -->
