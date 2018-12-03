@@ -14,8 +14,8 @@
     </div>
 
     <div class="buttons">
-        <button type="button" onclick = "setTimer();" class="btn btn-outline-success">Start</button>
-        <button type="button" class="btn btn-outline-danger">Stop</button>
+        <button type="button" onclick = "startTimer();" class="btn btn-outline-success">Start</button>
+        <button type="button" onclick = "stopTimer();" class="btn btn-outline-danger">Stop</button>
        
     </div>
     <div>
